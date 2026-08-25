@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LogStorage.Cli</RootNamespace>
+    <AssemblyName>logtool</AssemblyName>
+    <PublishAot>false</PublishAot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConsoleAppFramework">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Kokuban" />
+    <PackageReference Include="ZString" />
+    <PackageReference Include="ZLinq" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LogStorage.Core\LogStorage.Core.csproj" />
+  </ItemGroup>
+
+</Project>

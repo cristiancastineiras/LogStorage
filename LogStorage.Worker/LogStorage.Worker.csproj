@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <RootNamespace>LogStorage.Worker</RootNamespace>
+    <UserSecretsId>dotnet-LogStorage.Worker-2089c902-1499-4d53-a9b3-607b6798eb6d</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" />
+    <PackageReference Include="ZLogger" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LogStorage.Core\LogStorage.Core.csproj" />
+  </ItemGroup>
+
+</Project>

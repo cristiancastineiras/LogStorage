@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="LogStorage.Core/LogStorage.Core.csproj" />
+    <Project Path="LogStorage.Worker/LogStorage.Worker.csproj" />
+    <Project Path="LogStorage.CLI/LogStorage.CLI.csproj" />
+    <Project Path="LogStorage.Tray/LogStorage.Tray.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LogStorage.Tests/LogStorage.Tests.csproj" />
+    <Project Path="tests/LogStorage.IntegrationTests/LogStorage.IntegrationTests.csproj" />
+  </Folder>
+  <Folder Name="/installer/">
+    <File Path="installer/LogStorage.iss" />
+    <File Path="installer/build.ps1" />
+  </Folder>
+  <Folder Name="/bench/">
+    <Project Path="bench/LogStorage.Benchmarks/LogStorage.Benchmarks.csproj" />
+  </Folder>
+</Solution>

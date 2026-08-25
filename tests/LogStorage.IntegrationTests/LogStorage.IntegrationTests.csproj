@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LogStorage.IntegrationTests</RootNamespace>
+    <AssemblyName>LogStorage.IntegrationTests</AssemblyName>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <!-- Los tests son cortos y deterministas: no necesitan propagar el token de cancelación. -->
+    <NoWarn>$(NoWarn);xUnit1051</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\LogStorage.Core\LogStorage.Core.csproj" />
+    <ProjectReference Include="..\..\LogStorage.Worker\LogStorage.Worker.csproj" />
+    <ProjectReference Include="..\..\LogStorage.CLI\LogStorage.CLI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Reutilizamos el helper de carpeta temporal de los tests unitarios. -->
+    <Compile Include="..\LogStorage.Tests\TempStore.cs" Link="TempStore.cs" />
+  </ItemGroup>
+
+</Project>

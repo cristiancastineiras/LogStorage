@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>LogStorage</RootNamespace>
+    <AssemblyName>LogStorage.Core</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>LogStorage.Core</PackageId>
+    <Description>Almacenamiento de logs columnar, comprimido y sin base de datos: solo carpetas y ficheros.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ZstdSharp.Port" />
+    <PackageReference Include="Parquet.Net" />
+    <PackageReference Include="MemoryPack" />
+    <PackageReference Include="ZLinq" />
+    <PackageReference Include="ZString" />
+    <PackageReference Include="System.IO.Hashing" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="LogStorage.Tests" />
+    <InternalsVisibleTo Include="LogStorage.IntegrationTests" />
+    <InternalsVisibleTo Include="LogStorage.Benchmarks" />
+  </ItemGroup>
+
+</Project>
